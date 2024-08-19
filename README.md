@@ -5,6 +5,7 @@ This repository contains a Flask application designed to perform forecasting usi
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Data Collection](#data-collection)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Models](#models)
@@ -21,6 +22,9 @@ This application leverages classical forecasting models due to their efficiency 
 - Predict future sales based on historical data.
 - Visualize forecasting results with plots.
 - Lightweight and fast performance.
+
+## Data Collection
+Using Selenium and automation in Python, I extracted data from https://apps.semadata.org/Account/Login?ReturnUrl=%2F. A friend provided the necessary credentials, allowing me to scrape large volumes of data by making GET requests with the required parameters to retrieve yearly sales data for each product. The file named final.csv contains the finalized and cleaned dataset collected from the website.
 
 ## Installation
 To get started with the application, follow these steps:
