@@ -128,7 +128,7 @@ def plot():
         invert_transformation_keyword='antilog' # antilog or squareroot
         garch_working_dataframe=forecasting_methods.get_specific_category_dataframe(df,transform_status,transformation_type,category_name)
         garch_test_idx,garch_trained_model,garch_forecasted_dataframe=forecasting_methods.model_garch(garch_working_dataframe,transform_status,transformation_type,invert_transformation_keyword,garch_order)
-        working_dataframe[models_column_name[2]]=garch_forecasted_dataframe[auto_arima_forecasted_dataframe.columns[-1]]
+        working_dataframe[models_column_name[2]]=garch_forecasted_dataframe[garch_working_dataframe.columns[-1]]
         model = arch.arch_model(working_dataframe[sales_column],vol='GARCH', p=garch_order[0] ,q=garch_order[1])
         model_fit = model.fit(disp='off')
         pred = model_fit.forecast(horizon=1,reindex=False)
